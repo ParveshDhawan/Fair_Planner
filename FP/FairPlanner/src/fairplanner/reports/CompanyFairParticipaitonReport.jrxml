@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8903e58b-ffdb-4753-a89e-2a7162e2d449">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     companyfairparticipation.`Company_Id` AS companyfairparticipation_Company_Id,
+     companyfairparticipation.`Fair_Id` AS companyfairparticipation_Fair_Id,
+     companyfairparticipation.`Booking_Date` AS companyfairparticipation_Booking_Date,
+     companyfairparticipation.`No_Of_Stall_Booked` AS companyfairparticipation_No_Of_Stall_Booked,
+     companyfairparticipation.`Cancellation_Date` AS companyfairparticipation_Cancellation_Date
+FROM
+     `companyfairparticipation` companyfairparticipation]]>
+	</queryString>
+	<field name="companyfairparticipation_Company_Id" class="java.lang.Integer"/>
+	<field name="companyfairparticipation_Fair_Id" class="java.lang.Integer"/>
+	<field name="companyfairparticipation_Booking_Date" class="java.sql.Timestamp"/>
+	<field name="companyfairparticipation_No_Of_Stall_Booked" class="java.lang.Integer"/>
+	<field name="companyfairparticipation_Cancellation_Date" class="java.sql.Timestamp"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="589c5f79-1127-43b8-9d5c-e98c638def1f" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="c71e84c0-a866-4a6a-a854-7b90866511a5" x="20" y="20" width="306" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Company Report]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="39dcaf06-3a3c-41b4-9d96-fd847c8f9049" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[All Companies Detail]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="9c5cfc93-c852-4dec-a6c9-0445657eb9f9" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="25405f0d-2c64-456e-8dbe-4a75a4d8e0a5" mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Company ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd41a18b-f887-497c-98e0-21c7f003cafa" mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fair ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7bbb736d-04e9-424b-bc10-55cb74c5cd79" mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ce9f9ccb-86d3-45c5-a199-77224b42488f" mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stalls Booked]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f7eb328b-6327-43a4-afa0-0d985baa4db0" mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cancellation Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="03118cd1-cad1-4a49-9964-ae2ba2028bb9" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4a2a574f-12dd-4932-9cf3-6a15ce194641" x="0" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyfairparticipation_Company_Id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="919e5909-f82e-4647-9067-2fc658fc3158" x="111" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyfairparticipation_Fair_Id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="20a0150e-c1c7-4cff-bc49-c0a5632db7af" x="222" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyfairparticipation_Booking_Date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="1ae007fb-ebc2-4dcc-b69c-5438befa46e4" x="333" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyfairparticipation_No_Of_Stall_Booked}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="1d2881b3-7096-43eb-b602-e4892f8b305a" x="444" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyfairparticipation_Cancellation_Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="88c7e0cf-6832-4cd5-ab7c-ba8566d17ae9" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="180b5ffb-de95-4c9c-9c2c-5a0627c1e504" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="0f581c9b-5d9c-4a1c-a9b0-b3267e5ef187" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

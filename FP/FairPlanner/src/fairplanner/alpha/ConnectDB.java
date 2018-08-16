@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package fairplanner.alpha;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+/**
+ *mysql> 
+ * @author Parvesh
+ */
+public class ConnectDB {
+       public static Connection connect()
+    {
+        Connection conn=null;
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn=DriverManager.getConnection("jdbc:mysql:///fairplanner","root","mad");
+        }
+        catch(Exception e)
+        {
+            System.out.println("In connect()" +e);
+        }
+        return conn;
+    }
+ 
+}

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d39921d0-b27c-4355-a4fe-ec88e298e267">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     fairstalls.`fair_stall_id` AS fairstalls_fair_stall_id,
+     fairstalls.`Fair_Stall` AS fairstalls_Fair_Stall,
+     fairstalls.`Size` AS fairstalls_Size,
+     fairstalls.`Price` AS fairstalls_Price,
+     fairstalls.`No_Of_Stalls` AS fairstalls_No_Of_Stalls
+FROM
+     `fairstalls` fairstalls]]>
+	</queryString>
+	<field name="fairstalls_fair_stall_id" class="java.lang.Integer"/>
+	<field name="fairstalls_Fair_Stall" class="java.lang.String"/>
+	<field name="fairstalls_Size" class="java.lang.String"/>
+	<field name="fairstalls_Price" class="java.lang.Double"/>
+	<field name="fairstalls_No_Of_Stalls" class="java.lang.Integer"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="2f88479e-2b2f-4f7a-9c14-f0cb5e401f37" mode="Opaque" x="-20" y="-20" width="594" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="0abe4d0d-0207-438f-bdc8-e524cbc4d320" x="20" y="20" width="274" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fair Stall Report]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="385680bc-7eb4-4514-b6f9-a94c85e15197" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[All Fairs]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="ef4390cb-6e9a-4a0d-8139-7547c0896e8a" x="-20" y="20" width="594" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="b5e81965-957b-46cc-acbd-ce612f5f6183" mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fair Stall ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31d8af36-7f82-4fde-8d5d-be2bb391581b" mode="Opaque" x="111" y="0" width="110" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fair Stall]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9397dff7-6649-4f07-a3e9-9b519692a3cf" mode="Opaque" x="222" y="0" width="110" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Size]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="43f41c65-4ad8-4fd4-860d-a9f509cd2c58" mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d4423cd-25e3-4e0f-a165-0e0b34a11269" mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. of Stalls]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="4663ff48-4a1b-4f37-9dd7-aad2e65d5fb0" positionType="FixRelativeToBottom" x="0" y="19" width="554" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="caa84738-482a-4b14-8511-1aa8dade1024" x="0" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fairstalls_fair_stall_id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4a007b81-4d9c-456b-9093-21d643f33cc9" x="111" y="0" width="110" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fairstalls_Fair_Stall}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="7b9da02a-92d6-4f4b-ac59-547712ac72f9" x="222" y="0" width="110" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fairstalls_Size}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="3eaae082-a435-45a3-8332-d15a503ee087" x="333" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fairstalls_Price}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="00e0e107-1fc3-4be0-b980-ea160523c3b9" x="444" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fairstalls_No_Of_Stalls}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="3dcc143e-90de-414b-8042-94cf3dc69177" mode="Opaque" x="0" y="4" width="514" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="3697b267-6da8-4e06-baef-c72a68124bd5" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="e141fb13-27a0-4498-aa3a-96d0d74eb753" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
